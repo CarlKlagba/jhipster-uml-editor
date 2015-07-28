@@ -1,10 +1,12 @@
 'use strict';
 
-var dsl_parser = require('./node_modules/jhipster-uml/lib/dsl/dsl_parser');
+
+var requirejs = require('requirejs');
+/*var dsl_parser = require('./node_modules/jhipster-uml/lib/dsl/dsl_parser');
     EntitiesCreator = require('./node_modules/jhipster-uml/lib/entitiescreator'),
     ClassScheduler = require('./node_modules/jhipster-uml/lib/scheduler'),
     ParserFactory = require('./node_modules/jhipster-uml/lib/editors/parser_factory')/*,
-    model = require('./diagram_model')*/;
+    model = require('./diagram_model')*/;*/
 
 var uml = joint.shapes.uml;
 

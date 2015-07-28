@@ -1,0 +1,22 @@
+{
+  "name": "jhipster-uml-editor",
+  "version": "1.0.0",
+  "description": "This web project has the following setup:",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "jquery": "github:jquery/jquery/1.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlKlagba/jhipster-uml-editor.git"
+  },
+  "author": "Carl Klagba <klagba@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlKlagba/jhipster-uml-editor/issues"
+  },
+  "homepage": "https://github.com/CarlKlagba/jhipster-uml-editor#readme"
+}
