@@ -19387,6 +19387,8 @@ if (typeof exports === 'object') {
     var Backbone = require('backbone');
     var _ = require('lodash');
     var g = require('./geometry');
+}else{
+	    var Backbone = require('backbone');
 }
 
 
@@ -25002,6 +25004,13 @@ joint.connectors.smooth = function(sourcePoint, targetPoint, vertices) {
 };
 
 
+/**********************************************************************************************/
+
+
+
+
+
+
 
 
 /*! JointJS v0.9.3 - JavaScript diagramming library  2015-02-03 
@@ -25328,3 +25337,4 @@ if (typeof exports === 'object') {
 
     module.exports = joint.shapes.uml;
 }
+

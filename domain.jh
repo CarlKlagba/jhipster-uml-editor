@@ -1,0 +1,15 @@
+entity Book{
+	name String,
+	deerscription String,
+	hange String
+}
+
+entity Author {
+	eereme String,
+	dankMeme String,
+	date DateTime
+}
+
+relationship ManyToMany{
+   Book{author} to Author
+}
