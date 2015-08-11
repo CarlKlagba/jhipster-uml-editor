@@ -1,20 +1,20 @@
-define([	"app/messages",	"jquery", 	"joint"],
-function (	messages , 		$,			joint) {
+define([    "jquery", 	"joint",     "app/model",    "app/service"],
+function (  $,			joint,        model,          service){
    
-var graph = new joint.dia.Graph;
+model.graph = new joint.dia.Graph;
 
-var paper = new joint.dia.Paper({
+model.paper = new joint.dia.Paper({
     el: $('#paper'),
     width: 800,
     height: 600,
     gridSize: 1,
-    model: graph
+    model: model.graph
 });
 
 
 var uml = joint.shapes.uml;
 
-var classes = {
+model.classes = {
 
     mammal: new uml.Interface({
         position: { x:300  , y: 50 },
@@ -61,6 +61,18 @@ var classes = {
         methods: ['+ giveABrith(): Person []']
     })
 
-
 };
+
+_.each(model.classes, function(c) { model.graph.addCell(c); });
+model.relations = [
+    new uml.Generalization({ source: { id: model.classes.man.id }, target: { id: model.classes.person.id }}),
+    new uml.Generalization({ source: { id: model.classes.woman.id }, target: { id: model.classes.person.id }}),
+    new uml.Implementation({ source: { id: model.classes.person.id }, target: { id: model.classes.mammal.id }}),
+    new uml.Aggregation({ source: { id: model.classes.person.id }, target: { id: model.classes.address.id }}),
+    new uml.Composition({ source: { id: model.classes.person.id }, target: { id: model.classes.bloodgroup.id }})
+];
+_.each(model.relations, function(r) { model.graph.addCell(r); });
+
+service.dslToClass();
+
 });

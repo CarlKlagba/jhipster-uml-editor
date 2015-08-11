@@ -16810,7 +16810,7 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
 
 // A tiny library for making your live easier when dealing with SVG.
 
-// Copyright Â© 2012 - 2014 client IO (http://client.io)
+// Copyright Ã‚Â© 2012 - 2014 client IO (http://client.io)
 
 (function(root, factory) {
 
@@ -18165,7 +18165,7 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
 	        // 3P1 = 2P0 + P3
 	        firstControlPoints[0] = point((2 * knots[0].x + knots[1].x) / 3,
 	                                      (2 * knots[0].y + knots[1].y) / 3);
-	        // P2 = 2P1 â€“ P0
+	        // P2 = 2P1 Ã¢â‚¬â€œ P0
 	        secondControlPoints[0] = point(2 * firstControlPoints[0].x - knots[0].x,
 	                                       2 * firstControlPoints[0].y - knots[0].y);
 	        return [firstControlPoints, secondControlPoints];
@@ -18234,7 +18234,7 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
         },
 
         // Solves an inversion problem -- Given the (x, y) coordinates of a point which lies on
-        // a parametric curve x = x(t)/w(t), y = y(t)/w(t), ï¬nd the parameter value t
+        // a parametric curve x = x(t)/w(t), y = y(t)/w(t), Ã¯Â¬Ând the parameter value t
         // which corresponds to that point.
         // @param control points (start, control start, control end, end)
         // @return a function accepts a point and returns t.
@@ -19345,7 +19345,7 @@ var joint = {
 
             prefix: function(value, precision) {
 
-                var prefixes = _.map(['y','z','a','f','p','n','Âµ','m','','k','M','G','T','P','E','Z','Y'], function(d, i) {
+                var prefixes = _.map(['y','z','a','f','p','n','Ã‚Âµ','m','','k','M','G','T','P','E','Z','Y'], function(d, i) {
                     var k = Math.pow(10, abs(8 - i) * 3);
                     return {
                         scale: i > 8 ? function(d) { return d / k; } : function(d) { return d * k; },
@@ -19387,8 +19387,6 @@ if (typeof exports === 'object') {
     var Backbone = require('backbone');
     var _ = require('lodash');
     var g = require('./geometry');
-}else{
-	    var Backbone = require('backbone');
 }
 
 
@@ -25337,4 +25335,5 @@ if (typeof exports === 'object') {
 
     module.exports = joint.shapes.uml;
 }
+
 
